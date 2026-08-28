@@ -77,6 +77,28 @@ export const variableDefinitions: Record<string, VariableDefinition> = {
     // ADD YOUR VARIABLES HERE
     // ========================================
 
+    probabilityBusLate: {
+        defaultValue: 0.25,
+        type: 'number',
+        label: 'Chance the bus is late',
+        description: 'Probability of the first stage outcome: the school bus is late',
+        min: 0.05,
+        max: 0.95,
+        step: 0.05,
+        color: '#f59e0b',
+    },
+
+    probabilityRain: {
+        defaultValue: 0.4,
+        type: 'number',
+        label: 'Chance of rain',
+        description: 'Probability of the second stage outcome: it rains on the way to school',
+        min: 0.05,
+        max: 0.95,
+        step: 0.05,
+        color: '#3b82f6',
+    },
+
     // Uncomment and modify these examples for your lesson:
 
     /*

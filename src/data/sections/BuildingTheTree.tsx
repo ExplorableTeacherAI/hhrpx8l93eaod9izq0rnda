@@ -1,8 +1,9 @@
 import { type ReactElement } from "react";
 import { Block } from "@/components/templates";
 import { StackLayout } from "@/components/layouts";
-import { EditableH2, EditableParagraph } from "@/components/atoms";
-import { VisualOptionCards } from "@/components/organisms";
+import { EditableH2, EditableH3, EditableParagraph } from "@/components/atoms";
+import { TwoStageTreeBuilder } from "./TwoStageTreeBuilder";
+import { PracticeAnswer } from "./PracticeAnswer";
 
 export const buildingTheTreeBlocks: ReactElement[] = [
     <StackLayout key="layout-building-tree-heading" maxWidth="xl">
@@ -26,46 +27,83 @@ export const buildingTheTreeBlocks: ReactElement[] = [
     </StackLayout>,
 
     <StackLayout key="layout-building-tree-visual" maxWidth="xl">
-        <Block id="building-tree-visual" padding="sm">
-            <VisualOptionCards
-                blockId="building-tree-visual"
-                intro="Pick how your students will meet the structure of a two-stage tree."
-                cards={[
-                    {
-                        id: "grow-branches",
-                        title: "A tree that grows one stage at a time as students add each set of branches",
-                        looks: "An empty starting point with a button to add stage one, then stage two. Branches appear with their labels and fractions, and the four finished routes are listed at the ends.",
-                        manipulate: "Add each stage in turn, and change the two chances to see every fraction on the tree update",
-                        reveals: "A two-stage tree always ends in four routes, and the branches leaving any one point add up to 1",
-                        recommended: true,
-                    },
-                    {
-                        id: "hundred-students",
-                        title: "A hundred students walking through the two stages and splitting into four groups",
-                        looks: "A hundred small figures at the school gate. They split into two crowds at stage one, and each crowd splits again at stage two, leaving four labelled groups.",
-                        manipulate: "Change the chance of a late bus or of rain and watch the four group sizes shift",
-                        reveals: "Each route on the tree is simply one of the four groups, and the four groups always account for everyone",
-                    },
-                    {
-                        id: "two-spinners",
-                        title: "Two spinners spun in turn, with the matching route on the tree lighting up",
-                        looks: "A bus spinner and a weather spinner side by side, with a blank tree next to them. Spinning them lights the route that just happened.",
-                        manipulate: "Spin the two spinners and watch which of the four routes lights up each time",
-                        reveals: "Every spin lands on exactly one route, so the four routes cover all the possibilities without overlapping",
-                    },
-                ]}
-            />
+        <Block id="building-tree-visual" padding="sm" hasVisualization>
+            <TwoStageTreeBuilder />
         </Block>
     </StackLayout>,
 
     <StackLayout key="layout-building-tree-branch-sums" maxWidth="xl">
         <Block id="building-tree-branch-sums" padding="sm">
             <EditableParagraph id="para-building-tree-branch-sums" blockId="building-tree-branch-sums">
-                Each branch carries its own probability. The branches leaving any
-                single point are the only things that can happen there, so they
-                always add up to 1. That one fact is what keeps a tree honest, and
-                it is the quickest way to spot a missing fraction.
+                Each branch carries its own probability. Add the stages one at a
+                time and drag the two chances: the branches leaving any single
+                point always add up to 1, and so do the four finished routes. That
+                is the quickest way to spot a fraction you have written down wrong.
             </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-building-tree-practice-heading" maxWidth="xl">
+        <Block id="building-tree-practice-heading" padding="md">
+            <EditableH3 id="h3-building-tree-practice-heading" blockId="building-tree-practice-heading">
+                Your turn
+            </EditableH3>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-building-tree-practice-missing-question" maxWidth="xl">
+        <Block id="building-tree-practice-missing-question" padding="sm">
+            <EditableParagraph
+                id="para-building-tree-practice-missing-question"
+                blockId="building-tree-practice-missing-question"
+            >
+                A tree is drawn for a football match. The first stage has three
+                branches: Win with probability 1/5, Draw with probability 3/10, and
+                Lose. What probability belongs on the Lose branch?
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-building-tree-practice-missing-answer" maxWidth="xl">
+        <Block id="building-tree-practice-missing-answer" padding="sm">
+            <PracticeAnswer
+                expected={0.5}
+                correctMessage="Yes — 1/5 and 3/10 make 1/2, so the last branch must be the other 1/2. Branches from one point always finish at 1."
+                hints={[
+                    "The three branches leave the same point, so together they must account for everything.",
+                    "Add 1/5 and 3/10 first. Write them over the same denominator.",
+                    "1/5 + 3/10 = 5/10. Whatever is missing has to take the total up to 1.",
+                ]}
+                placeholder="e.g. 1/2"
+            />
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-building-tree-practice-routes-question" maxWidth="xl">
+        <Block id="building-tree-practice-routes-question" padding="sm">
+            <EditableParagraph
+                id="para-building-tree-practice-routes-question"
+                blockId="building-tree-practice-routes-question"
+            >
+                At the canteen you pick one of three drinks, then one of two
+                snacks. If you drew the tree for that, how many complete routes
+                would it end with?
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-building-tree-practice-routes-answer" maxWidth="xl">
+        <Block id="building-tree-practice-routes-answer" padding="sm">
+            <PracticeAnswer
+                expected={6}
+                correctMessage="Correct — each of the 3 drink branches splits into 2 snack branches, giving 6 routes. A route is one full drink-and-snack choice."
+                hints={[
+                    "A route is one complete journey from the start to the far right of the tree.",
+                    "Draw the first stage: three branches. Now every one of those splits again. How many times?",
+                    "Each of the 3 drink branches grows 2 snack branches, so count 3 lots of 2.",
+                ]}
+                placeholder="A whole number"
+            />
         </Block>
     </StackLayout>,
 ];
