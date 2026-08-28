@@ -19,6 +19,7 @@
     "along-branch-rule",
     "along-branch-practice-heading",
     "along-branch-practice-keeper-question",
+    "block-1787920848882",
     "along-branch-practice-keeper-answer",
     "along-branch-practice-spotting-question",
     "along-branch-practice-spotting-answer",
@@ -248,6 +249,18 @@
       "columns": [
         [
           "along-branch-practice-keeper-question"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-block-1787920848882",
+      "type": "stack",
+      "columns": [
+        [
+          "block-1787920848882"
         ]
       ],
       "props": {

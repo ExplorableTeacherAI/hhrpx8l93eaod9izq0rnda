@@ -1,7 +1,7 @@
 import { type ReactElement } from "react";
 import { Block } from "@/components/templates";
 import { StackLayout } from "@/components/layouts";
-import { EditableH2, EditableH3, EditableParagraph } from "@/components/atoms";
+import { EditableH2, EditableH3, EditableParagraph, EditableText } from "@/components/atoms";
 import { RouteShrinkingBar } from "./RouteShrinkingBar";
 import { PracticeAnswer } from "./PracticeAnswer";
 
@@ -62,6 +62,14 @@ export const alongABranchYouMultiplyBlocks: ReactElement[] = [
                 penalty is independent of the last. In a shoot-out, what is the
                 probability that she saves the first two penalties?
             </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-block-1787920848882" maxWidth="xl">
+        <Block id="block-1787920848882" padding="sm">
+            <blockquote className="border-l-4 border-gray-300 pl-4 py-2">
+                <EditableText id="text-block-1787920848882" blockId="block-1787920848882" as="p" className="text-lg italic text-gray-600">test</EditableText>
+            </blockquote>
         </Block>
     </StackLayout>,
 
