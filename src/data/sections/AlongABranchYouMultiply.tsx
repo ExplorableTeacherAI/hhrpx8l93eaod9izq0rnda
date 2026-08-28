@@ -35,8 +35,11 @@ export const alongABranchYouMultiplyBlocks: ReactElement[] = [
     <StackLayout key="layout-along-branch-rule" maxWidth="xl">
         <Block id="along-branch-rule" padding="sm">
             <EditableParagraph id="para-along-branch-rule" blockId="along-branch-rule">
-                For two things to happen one after the other, multiply their two
-                probabilities. That is exactly what the second cut does: it takes
+                For two things to happen one after the other,{" "}
+                <strong className="font-semibold text-slate-900">
+                    multiply their two probabilities
+                </strong>
+                . That is exactly what the second cut does: it takes
                 a share of a share, so the answer always comes out smaller than
                 either branch on its own. Switch the toggle on and you will see
                 adding land outside the piece we were cutting from.
