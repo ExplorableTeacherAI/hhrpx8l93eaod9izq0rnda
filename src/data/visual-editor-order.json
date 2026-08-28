@@ -32,6 +32,7 @@
     "block-1787920430849",
     "across-paths-practice-faulty-question",
     "across-paths-practice-faulty-answer",
+    "block-1787920512013",
     "wrapping-up-heading",
     "wrapping-up-rules",
     "wrapping-up-next"
@@ -403,6 +404,18 @@
       "columns": [
         [
           "across-paths-practice-faulty-answer"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-block-1787920512013",
+      "type": "stack",
+      "columns": [
+        [
+          "block-1787920512013"
         ]
       ],
       "props": {

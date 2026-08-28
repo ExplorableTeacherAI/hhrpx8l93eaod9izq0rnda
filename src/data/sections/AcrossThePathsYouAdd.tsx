@@ -113,4 +113,10 @@ export const acrossThePathsYouAddBlocks: ReactElement[] = [
             />
         </Block>
     </StackLayout>,
+
+    <StackLayout key="layout-block-1787920512013" maxWidth="xl">
+        <Block id="block-1787920512013" padding="sm">
+            <hr className="my-6 border-t border-gray-200" />
+        </Block>
+    </StackLayout>,
 ];
