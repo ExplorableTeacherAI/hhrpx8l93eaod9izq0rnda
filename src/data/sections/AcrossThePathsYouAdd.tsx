@@ -1,8 +1,9 @@
 import { type ReactElement } from "react";
 import { Block } from "@/components/templates";
 import { StackLayout } from "@/components/layouts";
-import { EditableH2, EditableParagraph } from "@/components/atoms";
-import { VisualOptionCards } from "@/components/organisms";
+import { EditableH2, EditableH3, EditableParagraph } from "@/components/atoms";
+import { RouteSelectionTree } from "./RouteSelectionTree";
+import { PracticeAnswer } from "./PracticeAnswer";
 
 export const acrossThePathsYouAddBlocks: ReactElement[] = [
     <StackLayout key="layout-across-paths-heading" maxWidth="xl">
@@ -25,49 +26,85 @@ export const acrossThePathsYouAddBlocks: ReactElement[] = [
     </StackLayout>,
 
     <StackLayout key="layout-across-paths-visual" maxWidth="xl">
-        <Block id="across-paths-visual" padding="sm">
-            <VisualOptionCards
-                blockId="across-paths-visual"
-                intro="Pick how your students will see why separate routes are added together."
-                cards={[
-                    {
-                        id: "select-routes",
-                        title: "A tree where students tick the routes a question covers and watch them stack into one bar",
-                        looks: "The finished tree with a tick box on each of the four routes. Ticked routes slide across as coloured pieces that stack on top of each other in a single bar.",
-                        manipulate: "Tick the routes that match a given question and read the height of the stacked bar",
-                        reveals: "Chosen routes pile up rather than shrink, so separate routes are added, and ticking all four always gives exactly 1",
-                        targetsMisconception: "Students multiply separate paths instead of adding them",
-                        recommended: true,
-                    },
-                    {
-                        id: "shaded-square",
-                        title: "A square of all mornings with every region matching the question shaded together",
-                        looks: "The unit square divided into four rectangles, one per route. The rectangles that answer the current question are shaded, and their combined area is shown.",
-                        manipulate: "Switch between questions such as both, exactly one, and at least one, and watch which regions shade",
-                        reveals: "The answer is the total shaded area, so the separate regions are summed, and it can never be smaller than any single region",
-                        targetsMisconception: "Students multiply separate paths instead of adding them",
-                    },
-                    {
-                        id: "sorted-mornings",
-                        title: "Simulated mornings dropped into four buckets that students then combine",
-                        looks: "Mornings falling into four labelled buckets, one per route, with counts rising. Buckets can be joined together into a single group.",
-                        manipulate: "Choose which buckets a question needs and combine them into one count",
-                        reveals: "Combining buckets means totalling their counts, which is adding, and the combined group is always the larger one",
-                        targetsMisconception: "Students multiply separate paths instead of adding them",
-                    },
-                ]}
-            />
+        <Block id="across-paths-visual" padding="sm" hasVisualization>
+            <RouteSelectionTree />
         </Block>
     </StackLayout>,
 
     <StackLayout key="layout-across-paths-rule" maxWidth="xl">
         <Block id="across-paths-rule" padding="sm">
             <EditableParagraph id="para-across-paths-rule" blockId="across-paths-rule">
-                Each route is already a finished probability, and separate routes
-                are alternatives rather than steps. Alternatives are added.
-                Multiplying two routes together would drag the answer below either
-                one of them, which is the wrong direction entirely.
+                Ticked routes pile up rather than shrink, because each route is
+                already a finished probability and separate routes are alternatives
+                rather than steps. Alternatives are added. Tick all four and the bar
+                fills exactly, which is the check that nothing has been missed or
+                counted twice.
             </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-across-paths-practice-heading" maxWidth="xl">
+        <Block id="across-paths-practice-heading" padding="md">
+            <EditableH3 id="h3-across-paths-practice-heading" blockId="across-paths-practice-heading">
+                Your turn
+            </EditableH3>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-across-paths-practice-quiz-question" maxWidth="xl">
+        <Block id="across-paths-practice-quiz-question" padding="sm">
+            <EditableParagraph
+                id="para-across-paths-practice-quiz-question"
+                blockId="across-paths-practice-quiz-question"
+            >
+                In a quiz round, Ann answers correctly with probability 3/5 and Ben
+                with probability 1/2, independently of each other. What is the
+                probability that exactly one of them answers correctly?
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-across-paths-practice-quiz-answer" maxWidth="xl">
+        <Block id="across-paths-practice-quiz-answer" padding="sm">
+            <PracticeAnswer
+                expected={0.5}
+                correctMessage="Yes — Ann right and Ben wrong gives 3/10, Ann wrong and Ben right gives 1/5, and those two routes add to 1/2. Multiply along each route, then add the routes."
+                hints={[
+                    "'Exactly one' is true on two different routes. Find both before you calculate anything.",
+                    "The two routes are: Ann correct with Ben wrong, and Ann wrong with Ben correct. Work out each one on its own first.",
+                    "You should have 3/10 and 1/5. These are alternatives, not steps — tick two routes in the tree above and watch what the bar does to them.",
+                ]}
+                placeholder="e.g. 1/2"
+            />
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-across-paths-practice-faulty-question" maxWidth="xl">
+        <Block id="across-paths-practice-faulty-question" padding="sm">
+            <EditableParagraph
+                id="para-across-paths-practice-faulty-question"
+                blockId="across-paths-practice-faulty-question"
+            >
+                A machine makes two items, each faulty with probability 1/10 and
+                independent of the other. What is the probability that at least one
+                of the two items is faulty?
+            </EditableParagraph>
+        </Block>
+    </StackLayout>,
+
+    <StackLayout key="layout-across-paths-practice-faulty-answer" maxWidth="xl">
+        <Block id="across-paths-practice-faulty-answer" padding="sm">
+            <PracticeAnswer
+                expected={0.19}
+                tolerance={0.002}
+                correctMessage="Correct — the three routes give 1/100, 9/100 and 9/100, adding to 19/100. Subtracting the 'neither faulty' route from 1 gets you there faster."
+                hints={[
+                    "'At least one' does not mean 'exactly one'. How many of the four routes have a fault somewhere?",
+                    "Three routes match. Work out each one, then combine them — or find the one route with no fault at all and take it away from 1.",
+                    "The no-fault route is 9/10 x 9/10 = 81/100. Everything else is the answer.",
+                ]}
+                placeholder="e.g. 19/100"
+            />
         </Block>
     </StackLayout>,
 ];
