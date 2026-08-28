@@ -35,11 +35,11 @@ export const alongABranchYouMultiplyBlocks: ReactElement[] = [
     <StackLayout key="layout-along-branch-rule" maxWidth="xl">
         <Block id="along-branch-rule" padding="sm">
             <EditableParagraph id="para-along-branch-rule" blockId="along-branch-rule">
-                The second cut takes a share of a share, and taking a share of a
-                share is multiplying. Adding would make the two fractions bigger
-                instead: switch the toggle on and the added answer lands outside
-                the very piece we were cutting from. If a route ever comes out
-                larger than one of its own branches, you have added by mistake.
+                For two things to happen one after the other, multiply their two
+                probabilities. That is exactly what the second cut does: it takes
+                a share of a share, so the answer always comes out smaller than
+                either branch on its own. Switch the toggle on and you will see
+                adding land outside the piece we were cutting from.
             </EditableParagraph>
         </Block>
     </StackLayout>,
