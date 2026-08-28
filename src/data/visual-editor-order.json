@@ -1,4 +1,449 @@
 {
-  "version": 2,
-  "blockIds": []
+  "version": 3,
+  "blockIds": [
+    "introduction-title",
+    "introduction-hook",
+    "introduction-promise",
+    "building-tree-heading",
+    "building-tree-structure",
+    "building-tree-visual",
+    "building-tree-branch-sums",
+    "building-tree-practice-heading",
+    "building-tree-practice-missing-question",
+    "building-tree-practice-missing-answer",
+    "building-tree-practice-routes-question",
+    "building-tree-practice-routes-answer",
+    "along-branch-heading",
+    "along-branch-setup",
+    "along-branch-visual",
+    "along-branch-rule",
+    "along-branch-practice-heading",
+    "along-branch-practice-keeper-question",
+    "along-branch-practice-keeper-answer",
+    "along-branch-practice-spotting-question",
+    "along-branch-practice-spotting-answer",
+    "across-paths-heading",
+    "across-paths-setup",
+    "across-paths-visual",
+    "across-paths-rule",
+    "across-paths-practice-heading",
+    "across-paths-practice-quiz-question",
+    "across-paths-practice-quiz-answer",
+    "block-1787920430849",
+    "across-paths-practice-faulty-question",
+    "across-paths-practice-faulty-answer",
+    "wrapping-up-heading",
+    "wrapping-up-rules",
+    "wrapping-up-next"
+  ],
+  "rows": [
+    {
+      "id": "layout-introduction-title",
+      "type": "stack",
+      "columns": [
+        [
+          "introduction-title"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-introduction-hook",
+      "type": "stack",
+      "columns": [
+        [
+          "introduction-hook"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-introduction-promise",
+      "type": "stack",
+      "columns": [
+        [
+          "introduction-promise"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-structure",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-structure"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-visual",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-visual"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-branch-sums",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-branch-sums"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-practice-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-practice-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-practice-missing-question",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-practice-missing-question"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-practice-missing-answer",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-practice-missing-answer"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-practice-routes-question",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-practice-routes-question"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-building-tree-practice-routes-answer",
+      "type": "stack",
+      "columns": [
+        [
+          "building-tree-practice-routes-answer"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-setup",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-setup"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-visual",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-visual"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-rule",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-rule"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-practice-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-practice-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-practice-keeper-question",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-practice-keeper-question"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-practice-keeper-answer",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-practice-keeper-answer"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-practice-spotting-question",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-practice-spotting-question"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-along-branch-practice-spotting-answer",
+      "type": "stack",
+      "columns": [
+        [
+          "along-branch-practice-spotting-answer"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-setup",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-setup"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-visual",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-visual"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-rule",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-rule"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-practice-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-practice-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-practice-quiz-question",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-practice-quiz-question"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-practice-quiz-answer",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-practice-quiz-answer"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-block-1787920430849",
+      "type": "stack",
+      "columns": [
+        [
+          "block-1787920430849"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-practice-faulty-question",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-practice-faulty-question"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-across-paths-practice-faulty-answer",
+      "type": "stack",
+      "columns": [
+        [
+          "across-paths-practice-faulty-answer"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-wrapping-up-heading",
+      "type": "stack",
+      "columns": [
+        [
+          "wrapping-up-heading"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-wrapping-up-rules",
+      "type": "stack",
+      "columns": [
+        [
+          "wrapping-up-rules"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    },
+    {
+      "id": "layout-wrapping-up-next",
+      "type": "stack",
+      "columns": [
+        [
+          "wrapping-up-next"
+        ]
+      ],
+      "props": {
+        "maxWidth": "xl"
+      }
+    }
+  ]
 }

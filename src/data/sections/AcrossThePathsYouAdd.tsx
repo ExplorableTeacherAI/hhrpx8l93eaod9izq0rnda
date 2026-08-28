@@ -79,6 +79,12 @@ export const acrossThePathsYouAddBlocks: ReactElement[] = [
         </Block>
     </StackLayout>,
 
+    <StackLayout key="layout-block-1787920430849" maxWidth="xl">
+        <Block id="block-1787920430849" padding="sm">
+            <EditableParagraph id="para-block-1787920430849" blockId="block-1787920430849">Since the probability of each of them answering the question correctly is independent of each other, so the answer would be 1/2</EditableParagraph>
+        </Block>
+    </StackLayout>,
+
     <StackLayout key="layout-across-paths-practice-faulty-question" maxWidth="xl">
         <Block id="across-paths-practice-faulty-question" padding="sm">
             <EditableParagraph
