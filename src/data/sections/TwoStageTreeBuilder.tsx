@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button, Slider } from "@/components/atoms";
 import { useVar, useSetVar } from "@/stores";
+import { asFraction } from "./probabilityFormat";
 
 const VIEW_WIDTH = 700;
 const VIEW_HEIGHT = 380;
@@ -15,18 +16,6 @@ const LATE_COLOR = "#f59e0b";
 const ONTIME_COLOR = "#64748b";
 const RAIN_COLOR = "#3b82f6";
 const DRY_COLOR = "#94a3b8";
-
-const greatestCommonDivisor = (a: number, b: number): number =>
-    b === 0 ? a : greatestCommonDivisor(b, a % b);
-
-/** Turn a probability that is a multiple of 0.05 into a tidy fraction such as 3/20 */
-const asFraction = (value: number, denominator = 20): string => {
-    const numerator = Math.round(value * denominator);
-    if (numerator === 0) return "0";
-    const divisor = greatestCommonDivisor(numerator, denominator) || 1;
-    const bottom = denominator / divisor;
-    return bottom === 1 ? `${numerator / divisor}` : `${numerator / divisor}/${bottom}`;
-};
 
 interface BranchProps {
     from: { x: number; y: number };
